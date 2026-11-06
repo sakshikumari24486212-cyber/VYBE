@@ -1212,7 +1212,7 @@ a {
 
 
 /* ==========================================
-   CULTURAMA - MANDALA & FESTIVAL ART THEME
+   VYBE - MANDALA & FESTIVAL ART THEME
    ========================================== */
 
 body {
@@ -1360,4 +1360,910 @@ body > * {
         0 0 30px rgba(146, 92, 255, 0.22),
         0 0 60px rgba(255, 79, 163, 0.14);
 }
+
+
+
+
+/* =====================================
+   VYBE - SIGNATURE BRAND LOGO
+   ===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;600;700;800;900&display=swap');
+
+.logo,
+.brand,
+.nav-logo,
+.navbar .logo {
+    font-family: 'Bungee', sans-serif !important;
+    font-size: clamp(25px, 3vw, 36px) !important;
+    font-weight: 400 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase;
+    color: transparent !important;
+    background: linear-gradient(
+        110deg,
+        #ff65bd 0%,
+        #b28aff 35%,
+        #ffffff 55%,
+        #ff985c 85%,
+        #ff65bd 100%
+    );
+    background-size: 220% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0 0 8px rgba(255, 79, 163, 0.55))
+            drop-shadow(0 0 18px rgba(146, 92, 255, 0.35));
+
+    animation: vybeGlow 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.logo:hover,
+.brand:hover,
+.nav-logo:hover,
+.navbar .logo:hover {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+@keyframes vybeGlow {
+    0%, 100% {
+        background-position: 0% center;
+        filter: drop-shadow(0 0 7px rgba(255, 79, 163, 0.45));
+    }
+    50% {
+        background-position: 100% center;
+        filter: drop-shadow(0 0 15px rgba(146, 92, 255, 0.8));
+    }
+}
+
+/* Catchy modern website typography */
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo,
+    .brand,
+    .nav-logo,
+    .navbar .logo {
+        animation: none;
+    }
+}
+
+
+/* ==========================================
+   VYBE — CREAM SKETCH THEME
+   ========================================== */
+
+:root {
+    --cream: #f8f1e5;
+    --cream-light: #fffaf1;
+    --ink: #342b35;
+    --pink: #d96b91;
+    --violet: #8062a8;
+    --orange: #d58a55;
+}
+
+/* Warm cream background */
+body {
+    background-color: var(--cream) !important;
+    background-image:
+        radial-gradient(ellipse at 12% 15%, rgba(217,107,145,.10), transparent 30%),
+        radial-gradient(ellipse at 88% 35%, rgba(128,98,168,.10), transparent 28%),
+        radial-gradient(ellipse at 45% 90%, rgba(213,138,85,.10), transparent 32%),
+        repeating-linear-gradient(
+            135deg,
+            transparent 0px,
+            transparent 32px,
+            rgba(100,75,65,.025) 33px,
+            transparent 34px
+        ) !important;
+    color: var(--ink) !important;
+}
+
+/* Hand-drawn decorative sketch details */
+body::before {
+    background-image:
+        repeating-radial-gradient(
+            circle at 50% 50%,
+            transparent 0px,
+            transparent 22px,
+            rgba(170,112,120,.16) 23px,
+            transparent 24px,
+            transparent 35px
+        );
+    opacity: .20 !important;
+    pointer-events: none;
+}
+
+/* Navbar */
+nav, .navbar, header {
+    background: rgba(255,250,241,.90) !important;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(115,83,83,.18);
+}
+
+/* Logo definition */
+.brand, .logo, .nav-logo, .navbar .logo {
+    font-weight: 900 !important;
+    letter-spacing: 2px;
+    color: #49344f !important;
+    text-shadow: 2px 2px 0 rgba(217,107,145,.18);
+}
+
+.brand-symbol {
+    color: var(--pink) !important;
+    text-shadow: 0 0 12px rgba(217,107,145,.35);
+}
+
+/* Event cards */
+.event-card {
+    background: var(--cream-light) !important;
+    border: 1px solid rgba(100,75,65,.22) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    box-shadow:
+        0 5px 15px rgba(65,45,45,.08),
+        3px 3px 0 rgba(217,107,145,.12) !important;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-7px) rotate(-.4deg);
+    box-shadow: 0 14px 28px rgba(65,45,45,.15) !important;
+}
+
+/* Event pictures */
+.event-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-bottom: 3px solid rgba(217,107,145,.45);
+    filter: saturate(1.08) contrast(1.06);
+    transition: transform .4s ease, filter .4s ease;
+}
+
+.event-card:hover img {
+    transform: scale(1.035);
+    filter: saturate(1.18) contrast(1.09);
+}
+
+/* Card headings and descriptions */
+.event-card h2,
+.event-card h3 {
+    color: #49344f !important;
+    font-weight: 800;
+}
+
+.event-card p {
+    color: #655866 !important;
+    line-height: 1.65;
+}
+
+/* Registration form card */
+.form-card, .registration-card, .form-container {
+    background: rgba(255,250,241,.96) !important;
+    border: 1px solid rgba(100,75,65,.20) !important;
+    border-radius: 22px !important;
+    box-shadow: 0 12px 35px rgba(65,45,45,.09) !important;
+}
+
+/* Input fields */
+input, select, textarea {
+    background: #fffdf8 !important;
+    border: 1px solid #d9c9bd !important;
+    color: #342b35 !important;
+    border-radius: 10px !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--pink) !important;
+    box-shadow: 0 0 0 3px rgba(217,107,145,.13) !important;
+}
+
+/* Buttons */
+button, .btn, .button {
+    border-radius: 30px !important;
+    box-shadow: 0 5px 12px rgba(128,98,168,.18);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+button:hover, .btn:hover, .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(128,98,168,.25);
+}
+
+/* Footer */
+footer {
+    background: #eee3d5 !important;
+    color: #493f4a !important;
+    border-top: 1px solid rgba(100,75,65,.18);
+}
+
+/* Keep text readable */
+.hero, section {
+    color: var(--ink);
+}
+
+
+/* =========================================
+   VYBE — REFINED CREAM SKETCH DESIGN
+   ========================================= */
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'DM Sans', sans-serif !important;
+    background-color: #f8f0e2 !important;
+    color: #382d38 !important;
+    position: relative;
+}
+
+/* Visible hand-drawn background pattern */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: .48;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Cg fill='none' stroke='%23bd8b91' stroke-width='1.5' stroke-linecap='round' opacity='.8'%3E%3Ccircle cx='75' cy='75' r='30'/%3E%3Ccircle cx='75' cy='75' r='23'/%3E%3Cpath d='M75 38 Q95 58 75 75 Q55 92 75 112 M38 75 Q58 55 75 75 Q92 95 112 75 M75 45 Q45 45 45 75 Q45 105 75 105 Q105 105 105 75 Q105 45 75 45'/%3E%3Cpath d='M230 45 Q240 65 260 65 Q240 75 230 95 Q220 75 200 65 Q220 65 230 45Z'/%3E%3Cpath d='M275 170 Q285 180 295 170 Q285 160 275 170Z M285 155 L285 185 M270 170 L300 170'/%3E%3Cpath d='M40 245 C65 210 90 280 120 245 S175 210 195 245'/%3E%3Cpath d='M220 260 Q240 230 260 260 Q280 290 300 260'/%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23c48b62' stroke-width='1.4' opacity='.75'%3E%3Cpath d='M120 25 C145 55 145 80 120 120 C95 80 95 55 120 25Z M120 215 C95 185 95 160 120 120 C145 160 145 185 120 215Z M25 120 C55 95 80 95 120 120 C80 145 55 145 25 120Z M215 120 C185 145 160 145 120 120 C160 95 185 95 215 120Z'/%3E%3Ccircle cx='120' cy='120' r='32'/%3E%3Ccircle cx='120' cy='120' r='12'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 0 0, 75% 60%;
+    background-repeat: repeat, repeat;
+}
+
+/* Keep website content above the sketches */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo — stronger contrast and definition */
+.brand, .logo, .nav-logo, .navbar .logo {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px !important;
+    color: #39243f !important;
+    -webkit-text-fill-color: #39243f;
+    text-shadow:
+        1px 1px 0 #fff8ed,
+        2px 3px 0 rgba(217,107,145,.35) !important;
+    position: relative;
+    z-index: 5;
+}
+
+.brand-symbol {
+    color: #d45f8a !important;
+    -webkit-text-fill-color: #d45f8a;
+    font-size: 1.3em;
+    text-shadow: 0 2px 0 #fff4e8, 0 0 12px rgba(212,95,138,.35);
+}
+
+/* Headings */
+h1, h2, h3, .hero-title, .section-title {
+    font-family: 'Playfair Display', serif !important;
+    color: #38283d !important;
+    letter-spacing: -.5px;
+}
+
+/* Paragraphs and labels */
+p, label, input, select, textarea, button {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+p, label {
+    color: #5e505b;
+    line-height: 1.7;
+}
+
+/* Event cards — clear borders */
+.event-card {
+    background: #fffaf1 !important;
+    border: 2px solid #c9a99c !important;
+    border-radius: 18px !important;
+    outline: 1px solid rgba(128,83,95,.22);
+    outline-offset: 4px;
+    overflow: hidden !important;
+    box-shadow: 5px 6px 0 rgba(128,83,95,.12),
+                0 12px 25px rgba(65,45,45,.10) !important;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 7px 9px 0 rgba(217,107,145,.18),
+                0 16px 30px rgba(65,45,45,.14) !important;
+}
+
+/* Pictures */
+.event-card img {
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid #d69aa2 !important;
+    object-fit: cover;
+    filter: contrast(1.08) saturate(1.12);
+}
+
+/* Card text */
+.event-card h2, .event-card h3 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 800 !important;
+    color: #49324c !important;
+}
+
+.event-card p {
+    color: #655461 !important;
+}
+
+/* Form card */
+.form-card, .registration-card, .form-container {
+    border: 2px solid #d0b6a7 !important;
+    outline: 1px solid rgba(128,83,95,.18);
+    outline-offset: 4px;
+    background: #fffaf1 !important;
+    box-shadow: 6px 7px 0 rgba(128,83,95,.10),
+                0 14px 30px rgba(65,45,45,.08) !important;
+}
+
+/* Navbar */
+nav, .navbar, header {
+    background: rgba(255,250,241,.96) !important;
+    border-bottom: 2px solid #dfc9b8 !important;
+    backdrop-filter: blur(12px);
+}
+
+/* Decorative borders on images */
+img {
+    image-rendering: auto;
+}
+
+/* Responsive sketch visibility */
+@media (max-width: 700px) {
+    body::before {
+        opacity: .28;
+    }
+}
+
+
+/* ==========================================
+   VYBE — TYPOGRAPHY & TEXT VISIBILITY
+   ========================================== */
+
+/* Main font throughout the website */
+body {
+    font-family: 'DM Sans', sans-serif !important;
+    color: #35283b !important;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* All major headings */
+h1, h2, h3, h4,
+.hero-title, .section-title {
+    font-family: 'Playfair Display', serif !important;
+    color: #38243e !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+
+/* Hero heading — YOUR MOMENT STARTS HERE */
+.hero h1,
+.hero-title,
+.hero-content h1 {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: clamp(2.8rem, 6vw, 5.5rem) !important;
+    font-weight: 900 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -2px !important;
+    color: #392342 !important;
+    text-shadow:
+        2px 2px 0 #f8d8d9,
+        4px 5px 0 rgba(183,113,135,.20) !important;
+}
+
+/* Hero supporting text */
+.hero p,
+.hero-content p {
+    color: #594657 !important;
+    font-size: 1.08rem !important;
+    font-weight: 600 !important;
+    line-height: 1.8 !important;
+    max-width: 650px;
+}
+
+/* Section headings */
+section h2,
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    letter-spacing: -.7px !important;
+}
+
+/* Small section labels and kickers */
+.section-kicker,
+.hero-kicker,
+.eyebrow,
+.section-label {
+    font-family: 'Outfit', sans-serif !important;
+    color: #b64e78 !important;
+    font-size: .82rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 2.5px !important;
+    text-transform: uppercase;
+}
+
+/* All ordinary paragraphs */
+p, .description, .subtitle {
+    color: #5a4b59 !important;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+/* Card titles */
+.event-card h2,
+.event-card h3 {
+    font-family: 'Outfit', sans-serif !important;
+    color: #392442 !important;
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
+    letter-spacing: .2px;
+}
+
+/* Card descriptions */
+.event-card p {
+    color: #5b4c5a !important;
+    font-size: .95rem !important;
+    font-weight: 500 !important;
+    line-height: 1.7 !important;
+}
+
+/* Form labels */
+label {
+    color: #453447 !important;
+    font-weight: 800 !important;
+    font-size: .95rem !important;
+}
+
+/* Input text */
+input, select, textarea {
+    color: #392b3d !important;
+    font-weight: 600 !important;
+    font-size: .96rem !important;
+}
+
+/* Navigation links */
+nav a, .navbar a {
+    color: #49364d !important;
+    font-weight: 800 !important;
+    letter-spacing: .3px;
+    text-decoration-thickness: 1.5px;
+}
+
+/* Buttons */
+button, .btn, .button {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    letter-spacing: .6px;
+}
+
+/* Footer text */
+footer, footer p, footer a {
+    color: #514353 !important;
+    font-weight: 600;
+}
+
+/* Highlight important words */
+strong, b {
+    color: #a84370 !important;
+    font-weight: 900 !important;
+}
+
+/* Make text selection match the theme */
+::selection {
+    background: #e9b7c8;
+    color: #392342;
+}
+
+/* Mobile readability */
+@media (max-width: 600px) {
+    .hero h1,
+    .hero-title,
+    .hero-content h1 {
+        letter-spacing: -1px !important;
+    }
+
+    p {
+        font-size: .96rem;
+    }
+}
+
+
+/* ==========================================
+   VYBE — ALL EVENT CARD HEADING DESIGN
+   ========================================== */
+
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: clamp(1.35rem, 2vw, 1.7rem) !important;
+    font-weight: 900 !important;
+    color: #38213f !important;
+    letter-spacing: .5px !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 0 #f4d8df;
+}
+
+/* Decorative pink underline */
+.event-card h1::after,
+.event-card h2::after,
+.event-card h3::after,
+.event-card h4::after,
+.event-card .card-title::after,
+.event-card .event-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #d45f8a, #d9a16e);
+    transition: width .3s ease;
+}
+
+/* Underline expands on hover */
+.event-card:hover h1::after,
+.event-card:hover h2::after,
+.event-card:hover h3::after,
+.event-card:hover h4::after,
+.event-card:hover .card-title::after,
+.event-card:hover .event-title::after {
+    width: 100%;
+}
+
+/* Card content spacing */
+.event-card {
+    text-align: left;
+}
+
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    margin-top: 15px;
+}
+
+/* Make all card descriptions clear */
+.event-card p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: .96rem !important;
+    font-weight: 500 !important;
+    color: #594b59 !important;
+    line-height: 1.75 !important;
+}
+
+/* Consistent card padding */
+.event-card .card-content,
+.event-card .event-content {
+    padding: 18px !important;
+}
+
+
+/* VYBE — HIGH CONTRAST EVENT CARD TEXT */
+
+/* Event card headings */
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    color: #fffafc !important;
+    -webkit-text-fill-color: #fffafc !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 1.35rem !important;
+    letter-spacing: .3px !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,.35) !important;
+    text-transform: none !important;
+}
+
+/* Card descriptions */
+.event-card p,
+.event-card .description,
+.event-card .subtitle {
+    color: #eee4f3 !important;
+    -webkit-text-fill-color: #eee4f3 !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: .95rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Other text inside cards */
+.event-card span,
+.event-card label {
+    color: #f8edf7 !important;
+}
+
+/* Give card text a subtle readable shadow */
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card p {
+    text-shadow: 0 2px 7px rgba(0,0,0,.35);
+}
+
+/* Keep the card borders clearly visible */
+.event-card {
+    border: 1px solid rgba(255,230,245,.35) !important;
+}
+
+
+/* ==========================================
+   VYBE — SOFTER, LIGHTER EVENT CARDS
+   ========================================== */
+
+.event-card {
+    background-color: #806b83 !important;
+    background-blend-mode: screen !important;
+    border: 1.5px solid rgba(116, 77, 105, .45) !important;
+    border-radius: 19px !important;
+    box-shadow:
+        0 5px 0 rgba(139, 101, 120, .13),
+        0 10px 24px rgba(75, 52, 67, .12) !important;
+}
+
+/* Soft translucent colour overlay */
+.event-card::before {
+    background: linear-gradient(
+        120deg,
+        rgba(150, 112, 151, .24),
+        rgba(199, 139, 157, .20),
+        rgba(213, 165, 132, .16)
+    ) !important;
+}
+
+/* Keep card titles bright and readable */
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    color: #fffafc !important;
+    -webkit-text-fill-color: #fffafc !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    text-shadow: 0 2px 5px rgba(45, 27, 48, .5) !important;
+}
+
+/* Descriptions */
+.event-card p,
+.event-card .description,
+.event-card .subtitle {
+    color: #f9edf5 !important;
+    -webkit-text-fill-color: #f9edf5 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 4px rgba(45, 27, 48, .45);
+}
+
+/* Softer image appearance */
+.event-card img {
+    filter: brightness(1.12) saturate(1.08) contrast(1.02) !important;
+}
+
+/* Hover effect */
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 7px 0 rgba(139, 101, 120, .18),
+        0 15px 28px rgba(75, 52, 67, .16) !important;
+}
+
+/* Clear card edges */
+.event-card {
+    outline: 1px solid rgba(255, 250, 245, .65);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================
+   VYBE — SOFTER, LIGHTER EVENT CARDS
+   ========================================== */
+
+.event-card {
+    background-color: #806b83 !important;
+    background-blend-mode: screen !important;
+    border: 1.5px solid rgba(116, 77, 105, .45) !important;
+    border-radius: 19px !important;
+    box-shadow:
+        0 5px 0 rgba(139, 101, 120, .13),
+        0 10px 24px rgba(75, 52, 67, .12) !important;
+}
+
+/* Soft translucent colour overlay */
+.event-card::before {
+    background: linear-gradient(
+        120deg,
+        rgba(150, 112, 151, .24),
+        rgba(199, 139, 157, .20),
+        rgba(213, 165, 132, .16)
+    ) !important;
+}
+
+/* Keep card titles bright and readable */
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    color: #fffafc !important;
+    -webkit-text-fill-color: #fffafc !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    text-shadow: 0 2px 5px rgba(45, 27, 48, .5) !important;
+}
+
+/* Descriptions */
+.event-card p,
+.event-card .description,
+.event-card .subtitle {
+    color: #f9edf5 !important;
+    -webkit-text-fill-color: #f9edf5 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 4px rgba(45, 27, 48, .45);
+}
+
+/* Softer image appearance */
+.event-card img {
+    filter: brightness(1.12) saturate(1.08) contrast(1.02) !important;
+}
+
+/* Hover effect */
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 7px 0 rgba(139, 101, 120, .18),
+        0 15px 28px rgba(75, 52, 67, .16) !important;
+}
+
+/* Clear card edges */
+.event-card {
+    outline: 1px solid rgba(255, 250, 245, .65);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================
+   VYBE — SOFTER, LIGHTER EVENT CARDS
+   ========================================== */
+
+.event-card {
+    background-color: #806b83 !important;
+    background-blend-mode: screen !important;
+    border: 1.5px solid rgba(116, 77, 105, .45) !important;
+    border-radius: 19px !important;
+    box-shadow:
+        0 5px 0 rgba(139, 101, 120, .13),
+        0 10px 24px rgba(75, 52, 67, .12) !important;
+}
+
+/* Soft translucent colour overlay */
+.event-card::before {
+    background: linear-gradient(
+        120deg,
+        rgba(150, 112, 151, .24),
+        rgba(199, 139, 157, .20),
+        rgba(213, 165, 132, .16)
+    ) !important;
+}
+
+/* Keep card titles bright and readable */
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    color: #fffafc !important;
+    -webkit-text-fill-color: #fffafc !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    text-shadow: 0 2px 5px rgba(45, 27, 48, .5) !important;
+}
+
+/* Descriptions */
+.event-card p,
+.event-card .description,
+.event-card .subtitle {
+    color: #f9edf5 !important;
+    -webkit-text-fill-color: #f9edf5 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 4px rgba(45, 27, 48, .45);
+}
+
+/* Softer image appearance */
+.event-card img {
+    filter: brightness(1.12) saturate(1.08) contrast(1.02) !important;
+}
+
+/* Hover effect */
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 7px 0 rgba(139, 101, 120, .18),
+        0 15px 28px rgba(75, 52, 67, .16) !important;
+}
+
+/* Clear card edges */
+.event-card {
+    outline: 1px solid rgba(255, 250, 245, .65);
+    outline-offset: 2px;
+}
+
+
+/* VYBE — LIGHT FONT COLOUR FOR ALL SIX EVENT CARDS */
+
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card p,
+.event-card span,
+.event-card label,
+.event-card .card-title,
+.event-card .event-title,
+.event-card .description,
+.event-card .subtitle {
+    color: #FFF4FA !important;
+    -webkit-text-fill-color: #FFF4FA !important;
+    text-shadow: 0 1px 5px rgba(255, 190, 220, 0.35) !important;
+}
+
+/* Make event names extra prominent */
+.event-card h1,
+.event-card h2,
+.event-card h3,
+.event-card h4,
+.event-card .card-title,
+.event-card .event-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 1.4rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Make descriptions soft ivory-white */
+.event-card p,
+.event-card .description,
+.event-card .subtitle {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+}
+
+/* Keep icons and their backgrounds unchanged */
 
