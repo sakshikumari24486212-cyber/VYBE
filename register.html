@@ -319,6 +319,35 @@
 
                 </form>
 
+                <!-- FIND MY VYBE REGISTRATION -->
+                <section class="lookup-panel" id="findRegistration">
+                    <div class="lookup-heading">
+                        <span class="section-kicker">ALREADY REGISTERED?</span>
+                        <h3>Find My VYBE Registration</h3>
+                        <p>Retrieve your previously generated registration slip.</p>
+                    </div>
+
+                    <div class="lookup-controls">
+                        <label for="lookupIdentifier">
+                            COLLEGE REGISTRATION NUMBER OR EMAIL
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lookupIdentifier"
+                            placeholder="Enter your registration number or email"
+                            autocomplete="off"
+                        >
+
+                        <button type="button" id="lookupButton">
+                            Find My Registration ↗
+                        </button>
+                    </div>
+
+                    <p id="lookupMessage" role="status"></p>
+                    <div id="lookupResults"></div>
+                </section>
+
                 <div id="confirmation" hidden>
                     <div class="success-icon">✓</div>
                     <h2>You're on the list!</h2>
@@ -352,6 +381,7 @@
 
 </body>
 </html>
+
 
 
 

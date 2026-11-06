@@ -2436,3 +2436,110 @@ strong, b {
         transition: none;
     }
 }
+
+/* ==========================================
+   VYBE - FIND MY REGISTRATION
+========================================== */
+
+.lookup-panel {
+    margin-top: 38px;
+    padding: 26px;
+    border: 1px solid rgba(180, 125, 190, 0.25);
+    border-radius: 20px;
+    background: rgba(125, 85, 155, 0.07);
+}
+
+.lookup-heading {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.lookup-heading h3 {
+    margin: 9px 0;
+    font-size: 23px;
+    color: #ffffff;
+}
+
+.lookup-heading p {
+    color: #bdb0cc;
+    font-size: 14px;
+}
+
+.lookup-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lookup-controls label {
+    color: #d9c3e8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.lookup-controls input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(190, 145, 205, 0.35);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    color: #ffffff;
+    font: inherit;
+}
+
+.lookup-controls input:focus {
+    outline: 2px solid #b36bc4;
+    border-color: transparent;
+}
+
+.lookup-controls button,
+.lookup-result-card button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #7650a5, #bd609a);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.lookup-controls button:hover,
+.lookup-result-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(150, 75, 160, 0.25);
+}
+
+#lookupMessage {
+    text-align: center;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.lookup-result-card {
+    margin-top: 14px;
+    padding: 18px;
+    border: 1px solid rgba(190, 145, 205, 0.25);
+    border-radius: 13px;
+    background: rgba(255,255,255,0.05);
+}
+
+.lookup-result-card p {
+    color: #e9dff2;
+    line-height: 1.7;
+}
+
+.lookup-result-card button {
+    margin-top: 8px;
+}
+
+@media (max-width: 500px) {
+    .lookup-panel {
+        padding: 18px;
+    }
+
+    .lookup-heading h3 {
+        font-size: 20px;
+    }
+}
