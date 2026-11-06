@@ -2,7 +2,7 @@
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-    color: #ffffff;
+    color: #35283b;
 }
 
 .dashboard-heading {
@@ -10,12 +10,15 @@
 }
 
 .dashboard-heading h1 {
-    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #38243e;
     margin-bottom: 10px;
 }
 
 .dashboard-heading p {
-    color: #BDB8CE;
+    color: #5a4b59;
+    line-height: 1.7;
 }
 
 .stats-grid {
@@ -27,35 +30,61 @@
 
 .stat-card,
 .table-section {
-    background: #25213E;
+    background: #fffaf1;
     padding: 24px;
-    border-radius: 16px;
+    border: 2px solid #d0b6a7;
+    border-radius: 18px;
+    box-shadow: 5px 6px 0 rgba(128, 83, 95, .12),
+                0 12px 25px rgba(65, 45, 45, .08);
+}
+
+.stat-card {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 7px 9px 0 rgba(217, 107, 145, .18),
+                0 16px 30px rgba(65, 45, 45, .12);
 }
 
 .stat-card h3 {
-    color: #BDB8CE;
+    color: #5a4b59;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
+    font-weight: 800;
 }
 
 .stat-card p {
+    font-family: 'Outfit', sans-serif;
     font-size: 30px;
-    font-weight: bold;
-    color: #ED55A6;
+    font-weight: 900;
+    color: #b64e78;
     margin-top: 12px;
 }
 
 .table-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #38243e;
     margin-bottom: 20px;
 }
 
 #searchInput {
+    box-sizing: border-box;
     width: 100%;
     padding: 13px;
     margin-bottom: 20px;
-    border: 1px solid #7546F5;
-    border-radius: 8px;
-    background: #17152D;
-    color: white;
+    border: 1px solid #d9c9bd;
+    border-radius: 10px;
+    background: #fffdf8;
+    color: #392b3d;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #d96b91;
+    box-shadow: 0 0 0 3px rgba(217, 107, 145, .13);
 }
 
 .table-wrapper {
@@ -71,17 +100,27 @@ table {
 th, td {
     padding: 14px;
     text-align: left;
-    border-bottom: 1px solid #45405F;
+    border-bottom: 1px solid #dfc9b8;
+    color: #49364d;
 }
 
 th {
-    color: #ED55A6;
+    background: #f4e8dc;
+    color: #a84370;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+}
+
+tbody tr:hover {
+    background: #f8eee7;
 }
 
 footer {
     text-align: center;
     padding: 25px;
-    color: #BDB8CE;
+    color: #514353;
+    background: #eee3d5;
+    border-top: 1px solid rgba(100, 75, 65, .18);
 }
 
 @media (max-width: 700px) {
@@ -91,5 +130,10 @@ footer {
 
     .dashboard-container {
         padding: 12px;
+    }
+
+    .stat-card,
+    .table-section {
+        padding: 18px;
     }
 }
