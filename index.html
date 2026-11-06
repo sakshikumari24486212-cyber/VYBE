@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover events, celebrate creativity and be part of VYBE — the campus cultural fest.">
+    <title>VYBE | Feel the Fest</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a class="logo" href="index.html" aria-label="VYBE home">VYBE<span>.</span></a>
+
+        <nav aria-label="Main navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a class="nav-register" href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="hero-content">
+                <span class="eyebrow"><span class="eyebrow-dot"></span> THE CAMPUS CULTURAL FEST</span>
+
+                <h1>One Campus.<br>Infinite <span>Vibes.</span></h1>
+
+                <p class="hero-description">
+                    A celebration of talent, creativity and unforgettable moments.
+                    Find your stage, discover your passion and be part of VYBE.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#events" class="btn hero-primary">Explore Events <span>↗</span></a>
+                    <a href="#about" class="btn btn-secondary">Discover VYBE</a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="hero-note-line"></span>
+                    <span>YOUR MOMENT. YOUR STAGE. YOUR VYBE.</span>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-label="Colourful festival-inspired decorative artwork">
+                <div class="hero-art-ring ring-one"></div>
+                <div class="hero-art-ring ring-two"></div>
+                <div class="hero-art-core">
+                    <span class="hero-art-star">✳</span>
+                    <strong>VYBE</strong>
+                    <span class="hero-art-caption">MAKE IT COUNT</span>
+                </div>
+                <span class="floating-symbol symbol-one">✦</span>
+                <span class="floating-symbol symbol-two">✧</span>
+                <span class="floating-symbol symbol-three">✳</span>
+                <span class="floating-label">LET'S CELEBRATE</span>
+            </div>
+
+            <div class="hero-bottom-label">
+                <span>01 / THE EXPERIENCE</span>
+                <span>SCROLL TO EXPLORE ↓</span>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="section-heading">
+                <span class="eyebrow">A FESTIVAL OF POSSIBILITIES</span>
+                <h2>More than an event.<br><span>It's an experience.</span></h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    VYBE brings people together through music, movement, performance
+                    and imagination. Step beyond the everyday, meet new people and
+                    make memories that stay with you.
+                </p>
+
+                <div class="about-highlight">
+                    <span class="highlight-icon">✦</span>
+                    <div>
+                        <strong>Find your VYBE</strong>
+                        <span>Explore. Participate. Celebrate.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section" id="events">
+            <div class="events-top">
+                <div class="section-heading">
+                    <span class="eyebrow">THE LINEUP</span>
+                    <h2>Pick your <span>stage.</span></h2>
+                    <p>Discover the competitions and find where you belong.</p>
+                </div>
+
+                <a href="register.html" class="events-register-link">Join the fest <span>↗</span></a>
+            </div>
+
+            <div class="event-controls">
+                <div class="event-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input
+                        type="search"
+                        id="eventSearch"
+                        placeholder="Search competitions..."
+                        aria-label="Search competitions"
+                    >
+                </div>
+
+                <label class="filter-control">
+                    <span class="visually-hidden">Filter by category</span>
+                    <select id="eventCategory">
+                        <option value="all">All categories</option>
+                        <option value="dance">Dance</option>
+                        <option value="music">Music</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="drama">Drama</option>
+                        <option value="photography">Photography</option>
+                        <option value="art">Art</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="event-grid" id="eventGrid" aria-live="polite">
+                <p class="event-loading">Loading the VYBE lineup...</p>
+            </div>
+
+            <p class="event-count" id="eventCount" aria-live="polite"></p>
+        </section>
+
+        <section class="closing-section">
+            <div class="closing-decoration">✳</div>
+            <span class="eyebrow">YOUR TIME TO SHINE</span>
+            <h2>Don't just watch.<br><span>Be the VYBE.</span></h2>
+            <p>Choose your competition and get ready to make your mark.</p>
+            <a href="register.html" class="btn hero-primary">Register Now <span>↗</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo" href="index.html">VYBE<span>.</span></a>
+        <p>Made for moments that matter.</p>
+        <span class="footer-copy">© 2026 VYBE. All rights reserved.</span>
+    </footer>
+
+    <script src="js/events-data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
