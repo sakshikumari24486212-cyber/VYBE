@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULTURAMA 2026 | Dashboard</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>CULTURAMA 2026</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="dashboard-heading">
+            <h1>Admin Dashboard</h1>
+            <p>Manage cultural fest registrations and participants.</p>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Registrations</h3>
+                <p id="totalRegistrations">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Events</h3>
+                <p id="totalEvents">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Participants</h3>
+                <p id="totalParticipants">0</p>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Participant Registrations</h2>
+            <input type="search" id="searchInput"
+                placeholder="Search by name, registration number or email">
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Registration ID</th>
+                            <th>Student Name</th>
+                            <th>Registration No.</th>
+                            <th>Email</th>
+                            <th>Event</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrationTable">
+                        <tr>
+                            <td colspan="7">Loading registrations...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CULTURAMA. All rights reserved.</p>
+    </footer>
+
+    <script src="js/events-data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
