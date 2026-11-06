@@ -2267,3 +2267,172 @@ strong, b {
 
 /* Keep icons and their backgrounds unchanged */
 
+
+/* =====================================
+   VYBE REGISTRATION CONFIRMATION
+===================================== */
+
+#confirmation[hidden] {
+    display: none !important;
+}
+
+#confirmation:not([hidden]) {
+    display: block;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 40px 30px;
+    text-align: center;
+    background: #fffaf3;
+    border: 2px solid #d9a45b;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(65, 35, 70, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+#confirmation:not([hidden])::before {
+    content: "✦ VYBE 2026 ✦";
+    display: block;
+    color: #a65b83;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+#confirmation .success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #e5f4e8;
+    color: #27864b;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#confirmation h2 {
+    color: #44234d;
+    font-size: 30px;
+    margin-bottom: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+#confirmationDetails {
+    color: #55465a;
+    font-size: 15px;
+    line-height: 2;
+    overflow-wrap: anywhere;
+    margin: 20px 0;
+}
+
+#confirmation button {
+    margin-top: 18px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #542b61;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#confirmation button:hover {
+    background: #a34d85;
+    transform: translateY(-2px);
+}
+
+/* PRINT-FRIENDLY CONFIRMATION */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #confirmation:not([hidden]),
+    #confirmation:not([hidden]) * {
+        visibility: visible !important;
+    }
+
+    #confirmation:not([hidden]) {
+        display: block !important;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 35px;
+        box-sizing: border-box;
+        background: white !important;
+        border: 2px dashed #9b719b;
+        box-shadow: none;
+        color: black;
+    }
+
+    #confirmation button {
+        display: none !important;
+    }
+
+}
+
+
+/* VYBE CONFIRMATION DETAILS FORMATTING */
+#confirmationDetails {
+    white-space: pre-line;
+    line-height: 1.9;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 520px;
+    overflow-wrap: anywhere;
+}
+
+/* VYBE SUCCESS ANIMATION */
+@keyframes vybeConfirmationEntry {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#confirmation:not([hidden]) {
+    animation: vybeConfirmationEntry 0.6s ease-out both;
+}
+
+#confirmation .success-icon {
+    animation: vybeConfirmationEntry 0.7s ease-out both;
+}
+
+#confirmation button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#confirmation button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #confirmation:not([hidden]),
+    #confirmation .success-icon {
+        animation: none;
+    }
+
+    #confirmation button {
+        transition: none;
+    }
+}
