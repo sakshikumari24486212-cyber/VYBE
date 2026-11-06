@@ -404,3 +404,89 @@ h1, h2, h3, h4 {
 :focus-visible {
     outline-color: #b64e78;
 }
+
+/* VYBE SHARED CREAM THEME */
+:root {
+    --vybe-navy: #39243f;
+    --vybe-purple: #7650a5;
+    --vybe-pink: #b64e78;
+    --vybe-orange: #d98b62;
+
+    --bg-primary: #f8f0e2;
+    --bg-secondary: #f2e6d8;
+    --bg-card: #fffaf1;
+    --bg-card-hover: #fff3e7;
+
+    --text-primary: #382d38;
+    --text-secondary: #594657;
+    --text-muted: #8b7882;
+
+    --gradient-primary: linear-gradient(135deg, #7650a5, #bd609a);
+    --gradient-accent: linear-gradient(135deg, #bd609a, #df956d);
+
+    --border-color: #d0b6a7;
+    --shadow-card: 0 12px 30px rgba(73, 45, 63, 0.09);
+}
+
+body {
+    background: #f8f0e2;
+    color: #382d38;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #39243f;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    background: rgba(255, 250, 241, 0.94);
+    color: #39243f;
+    border-bottom: 1px solid rgba(208, 182, 167, 0.55);
+    box-shadow: 0 4px 20px rgba(73, 45, 63, 0.04);
+}
+
+.navbar .logo {
+    color: #39243f;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+}
+
+.navbar nav a {
+    color: #594657;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #b64e78;
+}
+
+.btn,
+.button {
+    background: linear-gradient(135deg, #7650a5, #bd609a);
+    color: #fffaf1;
+    border: none;
+    box-shadow: 0 7px 18px rgba(118, 80, 165, 0.18);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #7650a5;
+    border: 1px solid #b99bb5;
+    box-shadow: none;
+}
+
+.card {
+    background: #fffaf1;
+    border: 1px solid #d0b6a7;
+    box-shadow: 0 10px 26px rgba(73, 45, 63, 0.07);
+}
+
+::selection {
+    background: #bd609a;
+    color: #fff;
+}
+
+:focus-visible {
+    outline-color: #b64e78;
+}
