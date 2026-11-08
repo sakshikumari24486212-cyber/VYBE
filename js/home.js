@@ -1,4 +1,29 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
+    
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = mainNav.classList.toggle("show");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+        });
+
+        mainNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                mainNav.classList.remove("show");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+            });
+        });
+    }
+
     const eventGrid = document.getElementById("eventGrid");
     const searchInput = document.getElementById("eventSearch");
     const categorySelect = document.getElementById("eventCategory");
@@ -136,4 +161,50 @@
     categorySelect.addEventListener("change", renderEvents);
 
     renderEvents();
+});
+// VYBE ANIMATED STATISTICS
+document.addEventListener("DOMContentLoaded", () => {
+
+    const counters = document.querySelectorAll(".stat-number[data-count]");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const counter = entry.target;
+                const target = Number(counter.dataset.count);
+                const duration = 1500;
+                const startTime = performance.now();
+
+                function updateCounter(currentTime) {
+
+                    const progress = Math.min(
+                        (currentTime - startTime) / duration,
+                        1
+                    );
+
+                    const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+                    counter.textContent = Math.floor(
+                        easedProgress * target
+                    );
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                }
+
+                requestAnimationFrame(updateCounter);
+                observer.unobserve(counter);
+            }
+        });
+
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+
 });

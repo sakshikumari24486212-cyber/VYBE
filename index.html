@@ -1,26 +1,59 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover events, celebrate creativity and be part of VYBE — the campus cultural fest.">
     <title>VYBE | Feel the Fest</title>
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home-upgrades.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <a class="logo" href="index.html" aria-label="VYBE home">VYBE<span>.</span></a>
+   
+<!-- VYBE PREMIUM NAVIGATION -->
+<header class="navbar">
 
-        <nav aria-label="Main navigation">
-            <a class="active" href="index.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#events">Events</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a class="nav-register" href="register.html">Register</a>
-        </nav>
-    </header>
+    <a class="logo" href="index.html" aria-label="VYBE home">
+        VYBE<span>.</span>
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="mainNav" aria-label="Main navigation">
+
+        <a class="active" href="index.html">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#events">Events</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a class="nav-register" href="register.html">
+            Register Now <span>→</span>
+        </a>
+
+    </nav>
+
+</header>
+
 
     <main>
         <section class="hero-section">
@@ -67,6 +100,201 @@
                 <span>SCROLL TO EXPLORE ↓</span>
             </div>
         </section>
+        <!-- VYBE STATISTICS SECTION -->
+<section class="stats-section" id="stats">
+    <div class="stats-heading">
+        <span class="eyebrow">THE VYBE EXPERIENCE</span>
+        <h2>One fest. <span>Endless possibilities.</span></h2>
+        <p>Discover the opportunities waiting for you at VYBE.</p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <h3 class="stat-number" data-count="6">0</h3>
+            <p>Competitions</p>
+            <span class="stat-line"></span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🎨</div>
+            <h3 class="stat-number" data-count="6">0</h3>
+            <p>Event Categories</p>
+            <span class="stat-line"></span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🎭</div>
+            <h3 class="stat-number" data-count="1">0</h3>
+            <p>One Fest Community</p>
+            <span class="stat-line"></span>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">✨</div>
+            <h3 class="stat-number">∞</h3>
+            <p>Creative Possibilities</p>
+            <span class="stat-line"></span>
+        </div>
+
+    </div>
+</section>
+<!-- FEATURED EVENT SPOTLIGHT -->
+<section class="featured-section" id="featured">
+
+    <div class="featured-container">
+
+        <div class="featured-content">
+
+            <span class="eyebrow">✦ EVENT SPOTLIGHT</span>
+
+            <span class="featured-badge">
+                FEATURED COMPETITION
+            </span>
+
+            <h2>
+                Own the
+                <span>Dance Floor.</span>
+            </h2>
+
+            <p class="featured-description">
+                Feel the rhythm, express your creativity and
+                showcase your moves. Bring your energy to the
+                VYBE Dance Competition and make the stage yours.
+            </p>
+
+            <div class="featured-details">
+                <div>
+                    <span>✦</span>
+                    <p>Category: Dance</p>
+                </div>
+
+                <div>
+                    <span>♛</span>
+                    <p>Capacity: 100 participants</p>
+                </div>
+
+                <div>
+                    <span>◷</span>
+                    <p>Date: To be announced</p>
+                </div>
+            </div>
+
+            <a href="register.html?event=dance"
+               class="featured-register">
+                Register for Dance
+                <span>↗</span>
+            </a>
+
+        </div>
+
+        <div class="featured-art">
+            <div class="featured-orbit orbit-one"></div>
+            <div class="featured-orbit orbit-two"></div>
+
+            <div class="featured-art-content">
+                <span class="featured-star">✦</span>
+                <span class="featured-dancer">💃</span>
+                <span class="featured-art-label">FEEL THE RHYTHM</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- VYBE FEST TIMELINE -->
+<section class="timeline-section" id="schedule">
+
+    <div class="timeline-heading">
+        <span class="eyebrow">SAVE THE MOMENT</span>
+        <h2>The Fest <span>Timeline.</span></h2>
+        <p>Get ready for the competitions, performances and celebrations.</p>
+    </div>
+
+    <div class="timeline-container">
+
+        <div class="timeline-item">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-card">
+                <span class="timeline-tag">DANCE</span>
+                <h3>Dance Competition</h3>
+                <p>Show your moves and own the stage.</p>
+                <div class="timeline-info">
+                    <span>◷ Date: To be announced</span>
+                    <span>⌖ Venue: To be announced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-card">
+                <span class="timeline-tag">MUSIC</span>
+                <h3>Singing Competition</h3>
+                <p>Let your voice create unforgettable moments.</p>
+                <div class="timeline-info">
+                    <span>◷ Date: To be announced</span>
+                    <span>⌖ Venue: To be announced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-card">
+                <span class="timeline-tag">FASHION</span>
+                <h3>Fashion Show</h3>
+                <p>Bring your style, confidence and creativity.</p>
+                <div class="timeline-info">
+                    <span>◷ Date: To be announced</span>
+                    <span>⌖ Venue: To be announced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">04</div>
+            <div class="timeline-card">
+                <span class="timeline-tag">DRAMA</span>
+                <h3>Drama Competition</h3>
+                <p>Turn your imagination into a performance.</p>
+                <div class="timeline-info">
+                    <span>◷ Date: To be announced</span>
+                    <span>⌖ Venue: To be announced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">05</div>
+            <div class="timeline-card">
+                <span class="timeline-tag">PHOTOGRAPHY</span>
+                <h3>Photography Competition</h3>
+                <p>Capture stories through your lens.</p>
+                <div class="timeline-info">
+                    <span>◷ Date: To be announced</span>
+                    <span>⌖ Venue: To be announced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">06</div>
+            <div class="timeline-card">
+                <span class="timeline-tag">ART</span>
+                <h3>Art Competition</h3>
+                <p>Transform ideas into creative masterpieces.</p>
+                <div class="timeline-info">
+                    <span>◷ Date: To be announced</span>
+                    <span>⌖ Venue: To be announced</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
         <section class="about-section" id="about">
             <div class="section-heading">
