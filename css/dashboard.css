@@ -540,3 +540,51 @@ tbody tr:hover {
     }
 }
 
+
+/* PREMIUM DASHBOARD ANIMATIONS */
+@keyframes dashboardFadeIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.dashboard-heading {
+    animation: dashboardFadeIn .7s ease both;
+}
+
+.stat-card {
+    cursor: pointer;
+    animation: dashboardFadeIn .7s ease both;
+    transition: transform .35s ease, box-shadow .35s ease !important;
+}
+
+.stat-card:nth-child(1) { animation-delay: .1s; }
+.stat-card:nth-child(2) { animation-delay: .2s; }
+.stat-card:nth-child(3) { animation-delay: .3s; }
+
+.stat-card:hover {
+    transform: translateY(-10px) scale(1.025) !important;
+}
+
+.stat-card:active {
+    transform: scale(.97) !important;
+}
+
+.table-section {
+    animation: dashboardFadeIn .9s ease both;
+    animation-delay: .25s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-heading,
+    .stat-card,
+    .table-section {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+

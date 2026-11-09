@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CULTURAMA 2026 | Dashboard</title>
+    <title>VYBE 2026 | Dashboard</title>
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <header class="navbar">
-        <h2>CULTURAMA 2026</h2>
+        <h2>VYBE 2026</h2>
         <nav>
             <a href="index.html">Home</a>
             <a href="dashboard.html">Dashboard</a>
@@ -20,18 +20,19 @@
         <section class="dashboard-heading">
             <h1>Admin Dashboard</h1>
             <p>Manage cultural fest registrations and participants.</p>
+<a href="register.html" class="dashboard-enter-btn">Enter Registration</a>
         </section>
 
         <section class="stats-grid">
-            <div class="stat-card">
+            <div class="stat-card" role="button" tabindex="0" data-view="registrations">
                 <h3>Total Registrations</h3>
                 <p id="totalRegistrations">0</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" role="button" tabindex="0" data-view="events">
                 <h3>Total Events</h3>
                 <p id="totalEvents">0</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" role="button" tabindex="0" data-view="participants">
                 <h3>Total Participants</h3>
                 <p id="totalParticipants">0</p>
             </div>
@@ -39,8 +40,11 @@
 
         <section class="table-section">
             <h2>Participant Registrations</h2>
-            <input type="search" id="searchInput"
-                placeholder="Search by name, registration number or email">
+            <form id="dashboardSearchForm" class="dashboard-search">
+    <input type="search" id="searchInput"
+        placeholder="Search by name, registration number or email">
+    <button type="submit">Search</button>
+</form>
 
             <div class="table-wrapper">
                 <table>
@@ -50,6 +54,9 @@
                             <th>Student Name</th>
                             <th>Registration No.</th>
                             <th>Email</th>
+                            <th>Phone</th>
+                            <th>Department</th>
+                            <th>Year</th>
                             <th>Event</th>
                             <th>Date</th>
                             <th>Status</th>
@@ -57,7 +64,7 @@
                     </thead>
                     <tbody id="registrationTable">
                         <tr>
-                            <td colspan="7">Loading registrations...</td>
+                            <td colspan="10">Loading registrations...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -66,7 +73,7 @@
     </main>
 
     <footer>
-        <p>© 2026 CULTURAMA. All rights reserved.</p>
+        <p>Â© 2026 VYBE. All rights reserved.</p>
     </footer>
 
     <script src="js/events-data.js"></script>

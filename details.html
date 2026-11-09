@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VYBE 2026 | Details</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>VYBE 2026</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="details-container">
+        <a class="back-link" href="dashboard.html">← Back to Dashboard</a>
+
+        <section class="details-heading">
+            <p class="details-label">VYBE 2026</p>
+            <h1 id="pageTitle">Details</h1>
+            <p id="pageDescription">View fest information.</p>
+        </section>
+
+        <section class="details-summary">
+            <span id="summaryLabel">Total Records</span>
+            <strong id="summaryCount">0</strong>
+        </section>
+
+        <section class="details-table-section">
+            <form id="detailsSearchForm" class="details-search">
+    <input type="search" id="detailsSearch" placeholder="Search by name, registration number or email..." autocomplete="off">
+    <button type="submit">Search</button>
+</form>
+<div class="details-table-wrapper">
+                <table>
+                    <thead id="detailsHead"></thead>
+                    <tbody id="detailsBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 VYBE. All rights reserved.</p>
+    </footer>
+
+    <script src="js/events-data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/details.js"></script>
+</body>
+</html>

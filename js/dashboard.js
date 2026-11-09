@@ -23,9 +23,10 @@
         displayRegistrations(registrations);
 
         const searchInput = document.getElementById("searchInput");
+        const searchForm = document.getElementById("dashboardSearchForm");
 
-        searchInput.addEventListener("input", function () {
-            const search = this.value.trim().toLowerCase();
+        function filterRegistrations() {
+            const search = searchInput.value.trim().toLowerCase();
 
             const filtered = registrations.filter(item =>
                 String(item.studentName || "").toLowerCase().includes(search) ||
@@ -34,6 +35,13 @@
             );
 
             displayRegistrations(filtered);
+        }
+
+        searchInput.addEventListener("input", filterRegistrations);
+
+        searchForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            filterRegistrations();
         });
     }
 
@@ -45,7 +53,7 @@
             const row = document.createElement("tr");
             const cell = document.createElement("td");
 
-            cell.colSpan = 7;
+            cell.colSpan = 10;
             cell.textContent = "No registrations found.";
 
             row.appendChild(cell);
@@ -61,6 +69,9 @@
                 item.studentName,
                 item.registrationNumber,
                 item.email,
+                item.phone,
+                item.department,
+                item.year,
                 item.eventName,
                 item.createdAt
                     ? new Date(item.createdAt).toLocaleDateString()
@@ -78,12 +89,30 @@
         });
     }
 
+    function setupStatCards() {
+        document.querySelectorAll(".stat-card").forEach(card => {
+            function openDetails() {
+                window.location.href =
+                    "details.html?view=" + card.dataset.view;
+            }
+
+            card.addEventListener("click", openDetails);
+
+            card.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openDetails();
+                }
+            });
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         if (window.FestStorage) {
             loadDashboard();
+            setupStatCards();
         } else {
             console.error("FestStorage is not loaded.");
         }
     });
 })();
-
