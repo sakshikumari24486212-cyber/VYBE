@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,77 +7,121 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
-<body>
-    <header class="navbar">
-        <h2>VYBE 2026</h2>
-        <nav>
+<body class="vybe-dashboard">
+
+    <header class="dashboard-topbar">
+        <a href="index.html" class="dashboard-brand">VYBE <span>2026</span></a>
+
+        <nav class="top-navigation">
             <a href="index.html">Home</a>
-            <a href="dashboard.html">Dashboard</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="top-register">Register Now</a>
         </nav>
     </header>
 
-    <main class="dashboard-container">
-        <section class="dashboard-heading">
-            <h1>Admin Dashboard</h1>
-            <p>Manage cultural fest registrations and participants.</p>
-<a href="register.html" class="dashboard-enter-btn">Enter Registration</a>
-        </section>
+    <div class="dashboard-layout">
 
-        <section class="stats-grid">
-            <div class="stat-card" role="button" tabindex="0" data-view="registrations">
-                <h3>Total Registrations</h3>
-                <p id="totalRegistrations">0</p>
-            </div>
-            <div class="stat-card" role="button" tabindex="0" data-view="events">
-                <h3>Total Events</h3>
-                <p id="totalEvents">0</p>
-            </div>
-            <div class="stat-card" role="button" tabindex="0" data-view="participants">
-                <h3>Total Participants</h3>
-                <p id="totalParticipants">0</p>
-            </div>
-        </section>
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-heading">MENU</div>
+            <a href="dashboard.html" class="sidebar-link active">
+                <span>⌂</span> Dashboard
+            </a>
+            <a href="details.html?view=registrations" class="sidebar-link">
+                <span>▤</span> Details
+            </a>
 
-        <section class="table-section">
-            <h2>Participant Registrations</h2>
-            <form id="dashboardSearchForm" class="dashboard-search">
-    <input type="search" id="searchInput"
-        placeholder="Search by name, registration number or email">
-    <button type="submit">Search</button>
-</form>
+            <div class="sidebar-decoration">✿</div>
+            <p class="sidebar-caption">CELEBRATE<br>YOUR CULTURE</p>
+        </aside>
 
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Registration ID</th>
-                            <th>Student Name</th>
-                            <th>Registration No.</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Department</th>
-                            <th>Year</th>
-                            <th>Event</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="registrationTable">
-                        <tr>
-                            <td colspan="10">Loading registrations...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+        <main class="dashboard-main">
 
-    <footer>
-        <p>Â© 2026 VYBE. All rights reserved.</p>
-    </footer>
+            <section class="dashboard-heading">
+                <div>
+                    <span class="dashboard-eyebrow">✦ VYBE 2026 • CULTURAL FEST ✦</span>
+                    <h1>Admin Dashboard</h1>
+                    <p>Manage registrations, explore events and view participants.</p>
+                </div>
+                <a href="register.html" class="dashboard-enter-btn">
+                    Enter Registration ↗
+                </a>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card" role="button" tabindex="0" data-view="registrations">
+                    <span class="stat-icon">▤</span>
+                    <h3>Total Registrations</h3>
+                    <p id="totalRegistrations">0</p>
+                    <span class="stat-caption">View all registrations ↗</span>
+                </div>
+
+                <div class="stat-card" role="button" tabindex="0" data-view="events">
+                    <span class="stat-icon">✿</span>
+                    <h3>Total Events</h3>
+                    <p id="totalEvents">0</p>
+                    <span class="stat-caption">Explore all events ↗</span>
+                </div>
+
+                <div class="stat-card" role="button" tabindex="0" data-view="participants">
+                    <span class="stat-icon">♙</span>
+                    <h3>Total Participants</h3>
+                    <p id="totalParticipants">0</p>
+                    <span class="stat-caption">View participants ↗</span>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <div class="table-heading">
+                    <div>
+                        <span class="dashboard-eyebrow">✦ FESTIVAL RECORDS ✦</span>
+                        <h2>Participant Registrations</h2>
+                        <p>All registered participants in one place.</p>
+                    </div>
+                </div>
+
+                <form id="dashboardSearchForm" class="dashboard-search">
+                    <input type="search" id="searchInput"
+                        placeholder="Search by name, registration number or email">
+                    <button type="submit">Search ↗</button>
+                </form>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Registration ID</th>
+                                <th>Student Name</th>
+                                <th>Registration No.</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Department</th>
+                                <th>Year</th>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrationTable">
+                            <tr>
+                                <td colspan="10">Loading registrations...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>© 2026 VYBE. All rights reserved.</p>
+                <span>ONE CAMPUS. SIX EVENTS. ENDLESS MEMORIES.</span>
+            </footer>
+
+        </main>
+    </div>
 
     <script src="js/events-data.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
 </html>
+
