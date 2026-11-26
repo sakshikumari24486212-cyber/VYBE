@@ -6,6 +6,7 @@
     <title>CULTURAMA 2026 | Dashboard</title>
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/fest-management.css">
 </head>
 <body>
     <header class="navbar">
@@ -37,6 +38,98 @@
             </div>
         </section>
 
+        <section class="fest-management-section" id="festManagement">
+            <div class="fest-management-heading">
+                <span class="fest-eyebrow">ORGANIZER STUDIO</span>
+                <h2>Fest & Event Management</h2>
+                <p>Create and manage major college fests, concerts, DJ nights and cultural celebrations.</p>
+            </div>
+
+            <form id="festEventForm" class="fest-event-form">
+                <input type="hidden" id="festEventId">
+
+                <div class="fest-form-grid">
+                    <label>Event Title *
+                        <input id="festTitle" type="text" maxlength="100" required placeholder="e.g. VYBE Cultural Fest">
+                    </label>
+
+                    <label>Event Category *
+                        <select id="festCategory" required>
+                            <option value="">Choose category</option>
+                            <option>Cultural Fest</option>
+                            <option>Annual Fest</option>
+                            <option>Music Concert</option>
+                            <option>DJ Night / DJ Fest</option>
+                            <option>College Celebration</option>
+                            <option>Cultural Programme</option>
+                            <option>Artist Performance</option>
+                            <option>Inter-College Fest</option>
+                            <option>Other Major Fest Event</option>
+                        </select>
+                    </label>
+
+                    <label>Event Date *
+                        <input id="festDate" type="date" required>
+                    </label>
+
+                    <label>Start Time *
+                        <input id="festStartTime" type="time" required>
+                    </label>
+
+                    <label>End Time *
+                        <input id="festEndTime" type="time" required>
+                    </label>
+
+                    <label>Venue *
+                        <input id="festVenue" type="text" required placeholder="Event venue">
+                    </label>
+
+                    <label>Organizer
+                        <input id="festOrganizer" type="text" placeholder="Organizing committee">
+                    </label>
+
+                    <label>Contact Information
+                        <input id="festContact" type="text" placeholder="Email or phone">
+                    </label>
+
+                    <label class="fest-full-width">Registration / Booking URL
+                        <input id="festBookingUrl" type="url" placeholder="https://example.com">
+                    </label>
+
+                    <label class="fest-full-width">Short Announcement *
+                        <textarea id="festAnnouncement" maxlength="250" required rows="2" placeholder="A catchy announcement for the homepage"></textarea>
+                    </label>
+
+                    <label class="fest-full-width">Full Event Description *
+                        <textarea id="festDescription" required rows="4" placeholder="Tell visitors what this event is about..."></textarea>
+                    </label>
+
+                    <label class="fest-full-width">Event Poster / Cover Image
+                        <input id="festPoster" type="file" accept="image/*">
+                        <small>Choose an image file. The preview will appear below.</small>
+                    </label>
+
+                    <div class="fest-poster-preview-wrap fest-full-width">
+                        <img id="festPosterPreview" alt="Event poster preview" hidden>
+                        <p id="festPosterPlaceholder">Your poster preview will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="fest-form-actions">
+                    <button type="button" id="saveFestDraft" class="fest-btn fest-btn-secondary">Save Draft</button>
+                    <button type="submit" id="publishFestEvent" class="fest-btn fest-btn-primary">Publish Event</button>
+                    <button type="button" id="cancelFestEdit" class="fest-btn fest-btn-secondary">Clear Form</button>
+                </div>
+                <p id="festFormMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="fest-event-list">
+                <h3>Managed Major Events</h3>
+                <div id="festManagedEvents">
+                    <p>Loading your events...</p>
+                </div>
+            </div>
+        </section>
         <section class="table-section">
             <h2>Participant Registrations</h2>
             <input type="search" id="searchInput"
@@ -72,5 +165,9 @@
     <script src="js/events-data.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/dashboard.js"></script>
+    <script src="js/fest-events.js"></script>
+    <script src="js/fest-management.js"></script>
 </body>
 </html>
+
+
