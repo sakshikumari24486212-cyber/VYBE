@@ -2412,3 +2412,220 @@ footer {
         background-size: 35px 35px;
     }
 }
+
+
+/* ==========================================
+   VYBE — PREMIUM EDITORIAL THEME
+   ========================================== */
+
+:root {
+    --vybe-paper: #e9e2d7;
+    --vybe-ink: #211927;
+    --vybe-blue: #3548c9;
+    --vybe-orange: #ed7048;
+    --vybe-lilac: #b8a0c9;
+    --vybe-plum: #453047;
+}
+
+/* PAGE BACKGROUND */
+html,
+body {
+    background: var(--vybe-paper) !important;
+    color: var(--vybe-ink) !important;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 10% 15%, rgba(184,160,201,.32), transparent 35%),
+        radial-gradient(ellipse at 90% 35%, rgba(53,72,201,.12), transparent 30%),
+        var(--vybe-paper) !important;
+    background-attachment: scroll !important;
+    color: var(--vybe-ink);
+}
+
+/* SUBTLE BACKGROUND PATTERN */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: .20;
+    background-image: radial-gradient(#453047 0.7px, transparent 0.7px);
+    background-size: 24px 24px;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* NAVIGATION */
+.navbar {
+    background: rgba(233,226,215,.92) !important;
+    border-bottom: 1px solid rgba(33,25,39,.14) !important;
+    backdrop-filter: blur(18px);
+}
+
+.navbar .logo,
+.navbar nav a {
+    color: var(--vybe-ink) !important;
+}
+
+.navbar .logo span {
+    color: var(--vybe-orange) !important;
+}
+
+.navbar nav a.active {
+    color: var(--vybe-blue) !important;
+}
+
+.navbar nav .nav-register {
+    background: var(--vybe-ink) !important;
+    color: white !important;
+}
+
+/* HERO */
+.hero-section {
+    background:
+        radial-gradient(circle at 78% 40%, rgba(184,160,201,.55), transparent 30%),
+        radial-gradient(circle at 15% 90%, rgba(237,112,72,.15), transparent 30%),
+        var(--vybe-paper) !important;
+    color: var(--vybe-ink) !important;
+}
+
+.hero-content h1 {
+    color: var(--vybe-ink) !important;
+}
+
+.hero-content h1 span {
+    color: var(--vybe-blue) !important;
+}
+
+.hero-description {
+    color: #625968 !important;
+}
+
+.hero-content .eyebrow {
+    color: var(--vybe-blue) !important;
+}
+
+.hero-primary {
+    background: var(--vybe-blue) !important;
+    color: white !important;
+}
+
+.hero-content .btn-secondary {
+    background: var(--vybe-ink) !important;
+    color: white !important;
+}
+
+/* SECTION BACKGROUNDS */
+.events-section,
+.about-section,
+.stats-section,
+.featured-section,
+.timeline-section {
+    color: var(--vybe-ink) !important;
+}
+
+.events-section,
+.timeline-section {
+    background: transparent !important;
+}
+
+.about-section {
+    background: rgba(184,160,201,.20) !important;
+}
+
+.section-heading h2,
+.stats-heading h2,
+.timeline-heading h2 {
+    color: var(--vybe-ink) !important;
+}
+
+.section-heading h2 span,
+.timeline-heading h2 span {
+    color: var(--vybe-blue) !important;
+}
+
+.section-heading p,
+.about-content > p,
+.timeline-heading p {
+    color: #625968 !important;
+}
+
+/* EVENT CARDS */
+.event-card,
+.timeline-card {
+    background: rgba(255,255,255,.78) !important;
+    border: 1px solid rgba(69,48,71,.16) !important;
+    color: var(--vybe-ink) !important;
+    box-shadow: 0 14px 35px rgba(33,25,39,.07) !important;
+    backdrop-filter: blur(12px);
+}
+
+.event-card:hover,
+.timeline-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--vybe-blue) !important;
+    box-shadow: 0 22px 45px rgba(53,72,201,.13) !important;
+}
+
+.event-card h3,
+.timeline-card h3 {
+    color: var(--vybe-ink) !important;
+}
+
+/* STATISTICS */
+.stats-section {
+    background: var(--vybe-plum) !important;
+    color: white !important;
+}
+
+.stats-section h2,
+.stats-section p {
+    color: white !important;
+}
+
+.stat-card {
+    background: rgba(255,255,255,.09) !important;
+    border: 1px solid rgba(255,255,255,.17) !important;
+    color: white !important;
+}
+
+/* FEATURED EVENT */
+.featured-container {
+    background:
+        radial-gradient(circle at 90% 15%, rgba(184,160,201,.3), transparent 35%),
+        var(--vybe-plum) !important;
+    color: white !important;
+}
+
+.featured-container h2,
+.featured-container p {
+    color: white !important;
+}
+
+/* FOOTER */
+footer {
+    background: var(--vybe-ink) !important;
+    color: white !important;
+}
+
+footer a,
+footer p {
+    color: rgba(255,255,255,.78) !important;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll !important;
+    }
+
+    .navbar {
+        background: rgba(233,226,215,.97) !important;
+    }
+}
+
